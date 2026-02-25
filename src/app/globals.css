@@ -1,26 +1,151 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Force dark mode to never apply automatically by binding it to a class that doesn't exist */
+@custom-variant dark (&:where(.disable-dark-mode-entirely));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: #0071E3;
+  --color-background-light: #FFFFFF;
+  --color-background-dark: #000000;
+  --color-surface-light: #F5F5F7;
+  --color-surface-dark: #1D1D1F;
+  --color-text-main: #1D1D1F;
+  --color-text-muted: #86868B;
+  --color-border-light: #D2D2D7;
+  --color-border-dark: #424245;
+
+  --color-cupertino-black: #000000;
+  --color-cupertino-white: #FFFFFF;
+  --color-cupertino-surface: #F5F5F7;
+  --color-cupertino-text: #1D1D1F;
+  --color-cupertino-muted: #86868B;
+  --color-cupertino-accent: #0071E3;
+  --color-cupertino-border: #D2D2D7;
+
+  --radius-ios: 18px;
+  --radius-ios-sm: 12px;
+
+  --shadow-ios-lift: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
+  --shadow-ios-base: 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-glass: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  --tracking-tighter: -0.02em;
+  --tracking-tight: -0.01em;
+  --tracking-wide: 0.05em;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .dark .glass-nav {
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Typewriter Cursor */
+  .cursor-blink {
+    display: inline-block;
+    width: 4px;
+    /* Slightly thicker for impact */
+    height: 1em;
+    background-color: var(--color-primary);
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+    vertical-align: bottom;
+    /* Fix alignment with text base */
+    margin-bottom: 0.1em;
+  }
+
+  @keyframes blink {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+  }
+
+  /* Hover dimming effect for nav */
+  .nav-links:hover a {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-links:hover a:hover {
+    opacity: 1;
+  }
+
+  /* Smooth reveal animation */
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .reveal-delay-1 {
+    animation-delay: 0.2s;
+  }
+
+  .reveal-delay-2 {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes revealUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Smooth fade-in animation for scroll reveal */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+  }
+
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  .delay-400 {
+    animation-delay: 0.4s;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background-light text-text-main antialiased overflow-x-hidden transition-colors duration-300;
 }

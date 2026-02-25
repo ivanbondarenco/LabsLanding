@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - Cupertino Classic</title>
+<!-- Google Fonts: Material Symbols & Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#000000", // PRD Primary
+              "background-light": "#FFFFFF", // PRD Background
+              "background-dark": "#000000", // Dark mode equivalent
+              "surface": "#F5F5F7", // PRD Surface
+              "text-main": "#1D1D1F", // PRD Text
+              "text-muted": "#86868B", // PRD Muted
+              "accent": "#0071E3", // PRD Accent
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"], // Fallback for SF Pro
+              "body": ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem",
+              "sm": "8px",
+              "md": "12px", // PRD Radius for social icons
+              "lg": "18px", // PRD Radius for cards
+              "xl": "1.5rem",
+              "full": "9999px"
+            },
+            boxShadow: {
+               "lift": "0 10px 30px -10px rgba(0, 0, 0, 0.15)",
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom utilities for extreme typography */
+        .tracking-widest-custom {
+            letter-spacing: 0.2em;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased selection:bg-accent selection:text-white">
+<!-- Contact Section (The Connection) -->
+<div class="relative flex w-full flex-col justify-end bg-background-light dark:bg-background-dark py-24 min-h-[50vh]">
+<div class="layout-container flex w-full flex-col items-center justify-center px-4">
+<!-- CTA Label -->
+<div class="mb-8 text-center">
+<h4 class="text-text-main dark:text-white text-sm font-medium uppercase tracking-widest-custom">
+                    Contactame
+                </h4>
+</div>
+<!-- Social Grid -->
+<div class="flex flex-row gap-4 mb-16">
+<!-- GitHub -->
+<a aria-label="GitHub" class="group flex h-12 w-12 items-center justify-center rounded-md bg-surface transition-all duration-300 ease-out hover:bg-primary hover:-translate-y-1 hover:shadow-lg dark:bg-zinc-800 dark:hover:bg-white" href="#">
+<span class="material-symbols-outlined text-[24px] text-primary transition-colors duration-300 group-hover:text-white dark:text-white dark:group-hover:text-black">
+                        code
+                    </span>
+</a>
+<!-- LinkedIn -->
+<a aria-label="LinkedIn" class="group flex h-12 w-12 items-center justify-center rounded-md bg-surface transition-all duration-300 ease-out hover:bg-primary hover:-translate-y-1 hover:shadow-lg dark:bg-zinc-800 dark:hover:bg-white" href="#">
+<span class="material-symbols-outlined text-[24px] text-primary transition-colors duration-300 group-hover:text-white dark:text-white dark:group-hover:text-black">
+                        work
+                    </span>
+</a>
+<!-- Twitter / X -->
+<a aria-label="Twitter" class="group flex h-12 w-12 items-center justify-center rounded-md bg-surface transition-all duration-300 ease-out hover:bg-primary hover:-translate-y-1 hover:shadow-lg dark:bg-zinc-800 dark:hover:bg-white" href="#">
+<span class="material-symbols-outlined text-[24px] text-primary transition-colors duration-300 group-hover:text-white dark:text-white dark:group-hover:text-black">
+                        alternate_email
+                    </span>
+</a>
+<!-- Email -->
+<a aria-label="Email" class="group flex h-12 w-12 items-center justify-center rounded-md bg-surface transition-all duration-300 ease-out hover:bg-primary hover:-translate-y-1 hover:shadow-lg dark:bg-zinc-800 dark:hover:bg-white" href="#">
+<span class="material-symbols-outlined text-[24px] text-primary transition-colors duration-300 group-hover:text-white dark:text-white dark:group-hover:text-black">
+                        mail
+                    </span>
+</a>
+</div>
+<!-- Copyright -->
+<div class="text-center">
+<p class="text-[10px] text-text-muted leading-relaxed">
+                    Designed by Ivan. Cupertino Classic Style.<br/>
+                    © 2024. All rights reserved.
+                </p>
+</div>
+</div>
+</div>
+<!-- Optional JS for any specific interactions, though CSS handles the hover states required -->
+<script>
+        // No JS needed for this specific view as per CSS-only interaction requirements
+    </script>
+</body></html>

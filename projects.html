@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cupertino Classic - Projects</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "cupertino-black": "#000000",
+                        "cupertino-white": "#FFFFFF",
+                        "cupertino-surface": "#F5F5F7",
+                        "cupertino-text": "#1D1D1F",
+                        "cupertino-muted": "#86868B",
+                        "cupertino-accent": "#0071E3",
+                        "cupertino-border": "#D2D2D7",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+                        "body": ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+                    },
+                    boxShadow: {
+                        'ios-lift': '0 10px 30px -10px rgba(0, 0, 0, 0.15)',
+                        'ios-base': '0 4px 12px rgba(0,0,0,0.04)',
+                    },
+                    borderRadius: {
+                        'ios': '18px',
+                        'ios-sm': '12px',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Utility for the specific tracking mentioned in PRD */
+        .tracking-tight-ios {
+            letter-spacing: -0.02em;
+        }
+        .tracking-wide-ios {
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body class="bg-cupertino-white text-cupertino-text antialiased font-display min-h-screen flex flex-col">
+<!-- Navbar (Simplified for Context) -->
+<nav class="sticky top-0 z-50 w-full border-b border-cupertino-border/50 bg-cupertino-white/80 backdrop-blur-xl">
+<div class="mx-auto flex max-w-[980px] items-center justify-between px-6 h-[48px]">
+<a class="text-cupertino-black hover:opacity-70 transition-opacity" href="#">
+<span class="material-symbols-outlined text-xl">ios</span>
+</a>
+<div class="hidden md:flex gap-8 text-[12px] font-normal text-cupertino-text/80">
+<a class="hover:text-cupertino-accent transition-colors" href="#">Store</a>
+<a class="hover:text-cupertino-accent transition-colors" href="#">Mac</a>
+<a class="hover:text-cupertino-accent transition-colors" href="#">iPad</a>
+<a class="hover:text-cupertino-accent transition-colors" href="#">iPhone</a>
+<a class="hover:text-cupertino-accent transition-colors" href="#">Watch</a>
+<a class="hover:text-cupertino-accent transition-colors" href="#">AirPods</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[18px] text-cupertino-text/80 cursor-pointer hover:text-cupertino-accent transition-colors">search</span>
+<span class="material-symbols-outlined text-[18px] text-cupertino-text/80 cursor-pointer hover:text-cupertino-accent transition-colors">shopping_bag</span>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-grow w-full">
+<!-- Projects Section (The Grid) -->
+<section class="w-full py-24 px-6 bg-cupertino-white" id="projects">
+<div class="mx-auto max-w-[980px]">
+<!-- Section Header -->
+<div class="mb-16 text-center">
+<h2 class="text-cupertino-black text-[40px] md:text-[48px] font-semibold leading-tight tracking-tight-ios">
+                        Selected Work.
+                    </h2>
+<p class="mt-4 text-xl text-cupertino-muted font-normal max-w-2xl mx-auto">
+                        A collection of digital products crafted with precision.
+                    </p>
+</div>
+<!-- The Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project Card 1: Protocol -->
+<div class="group relative flex flex-col h-full bg-cupertino-white rounded-ios border border-cupertino-border p-8 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-ios-lift cursor-pointer overflow-hidden">
+<div class="mb-6 flex-shrink-0">
+<!-- Icon / Thumbnail -->
+<div class="w-16 h-16 rounded-[14px] flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 shadow-inner">
+<span class="material-symbols-outlined text-3xl text-gray-600">token</span>
+</div>
+</div>
+<div class="flex flex-col flex-grow">
+<h3 class="text-[21px] font-semibold text-cupertino-black mb-2 tracking-tight-ios">Protocol</h3>
+<p class="text-[17px] leading-relaxed text-cupertino-muted mb-6 flex-grow">
+                                DeFi dashboard visualization designed for clarity in high-stakes trading environments.
+                            </p>
+<div class="mt-auto pt-4 flex items-center text-cupertino-accent text-[17px] font-normal group-hover:underline">
+                                View Case Study <span class="material-symbols-outlined text-sm ml-1">arrow_forward_ios</span>
+</div>
+</div>
+<!-- Subtle Background Decoration -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-blue-50/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+</div>
+<!-- Project Card 2: Lumina -->
+<div class="group relative flex flex-col h-full bg-cupertino-white rounded-ios border border-cupertino-border p-8 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-ios-lift cursor-pointer overflow-hidden">
+<div class="mb-6 flex-shrink-0">
+<div class="w-16 h-16 rounded-[14px] flex items-center justify-center bg-gradient-to-br from-orange-50 to-amber-100 shadow-inner">
+<span class="material-symbols-outlined text-3xl text-orange-400">lightbulb</span>
+</div>
+</div>
+<div class="flex flex-col flex-grow">
+<h3 class="text-[21px] font-semibold text-cupertino-black mb-2 tracking-tight-ios">Lumina</h3>
+<p class="text-[17px] leading-relaxed text-cupertino-muted mb-6 flex-grow">
+                                Smart home controller interface focusing on ambient computing and warmth.
+                            </p>
+<div class="mt-auto pt-4 flex items-center text-cupertino-accent text-[17px] font-normal group-hover:underline">
+                                View Case Study <span class="material-symbols-outlined text-sm ml-1">arrow_forward_ios</span>
+</div>
+</div>
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-orange-50/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+</div>
+<!-- Project Card 3: Vantage -->
+<div class="group relative flex flex-col h-full bg-cupertino-white rounded-ios border border-cupertino-border p-8 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-ios-lift cursor-pointer overflow-hidden">
+<div class="mb-6 flex-shrink-0">
+<div class="w-16 h-16 rounded-[14px] flex items-center justify-center bg-gradient-to-br from-slate-800 to-black shadow-inner">
+<span class="material-symbols-outlined text-3xl text-white">analytics</span>
+</div>
+</div>
+<div class="flex flex-col flex-grow">
+<h3 class="text-[21px] font-semibold text-cupertino-black mb-2 tracking-tight-ios">Vantage</h3>
+<p class="text-[17px] leading-relaxed text-cupertino-muted mb-6 flex-grow">
+                                Enterprise data analytics platform with a focus on actionable insights.
+                            </p>
+<div class="mt-auto pt-4 flex items-center text-cupertino-accent text-[17px] font-normal group-hover:underline">
+                                View Case Study <span class="material-symbols-outlined text-sm ml-1">arrow_forward_ios</span>
+</div>
+</div>
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-gray-100/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+</div>
+<!-- Project Card 4: Orbit -->
+<div class="group relative flex flex-col h-full bg-cupertino-white rounded-ios border border-cupertino-border p-8 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-ios-lift cursor-pointer overflow-hidden">
+<div class="mb-6 flex-shrink-0">
+<div class="w-16 h-16 rounded-[14px] flex items-center justify-center bg-gradient-to-br from-indigo-50 to-indigo-100 shadow-inner">
+<span class="material-symbols-outlined text-3xl text-indigo-500">groups</span>
+</div>
+</div>
+<div class="flex flex-col flex-grow">
+<h3 class="text-[21px] font-semibold text-cupertino-black mb-2 tracking-tight-ios">Orbit</h3>
+<p class="text-[17px] leading-relaxed text-cupertino-muted mb-6 flex-grow">
+                                Community management tool designed to foster meaningful connections.
+                            </p>
+<div class="mt-auto pt-4 flex items-center text-cupertino-accent text-[17px] font-normal group-hover:underline">
+                                View Case Study <span class="material-symbols-outlined text-sm ml-1">arrow_forward_ios</span>
+</div>
+</div>
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-indigo-50/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+</div>
+<!-- Project Card 5: Architect -->
+<div class="group relative flex flex-col h-full bg-cupertino-white rounded-ios border border-cupertino-border p-8 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-ios-lift cursor-pointer overflow-hidden">
+<div class="mb-6 flex-shrink-0">
+<div class="w-16 h-16 rounded-[14px] flex items-center justify-center bg-gradient-to-br from-emerald-50 to-teal-100 shadow-inner">
+<span class="material-symbols-outlined text-3xl text-emerald-600">code</span>
+</div>
+</div>
+<div class="flex flex-col flex-grow">
+<h3 class="text-[21px] font-semibold text-cupertino-black mb-2 tracking-tight-ios">Architect</h3>
+<p class="text-[17px] leading-relaxed text-cupertino-muted mb-6 flex-grow">
+                                A VS Code theme generator that uses color theory to reduce eye strain.
+                            </p>
+<div class="mt-auto pt-4 flex items-center text-cupertino-accent text-[17px] font-normal group-hover:underline">
+                                View Case Study <span class="material-symbols-outlined text-sm ml-1">arrow_forward_ios</span>
+</div>
+</div>
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-emerald-50/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+</div>
+<!-- Project Card 6: Pulse -->
+<div class="group relative flex flex-col h-full bg-cupertino-white rounded-ios border border-cupertino-border p-8 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-ios-lift cursor-pointer overflow-hidden">
+<div class="mb-6 flex-shrink-0">
+<div class="w-16 h-16 rounded-[14px] flex items-center justify-center bg-gradient-to-br from-rose-50 to-red-100 shadow-inner">
+<span class="material-symbols-outlined text-3xl text-rose-500">favorite</span>
+</div>
+</div>
+<div class="flex flex-col flex-grow">
+<h3 class="text-[21px] font-semibold text-cupertino-black mb-2 tracking-tight-ios">Pulse</h3>
+<p class="text-[17px] leading-relaxed text-cupertino-muted mb-6 flex-grow">
+                                Health integration service connecting wearables to clinical records securely.
+                            </p>
+<div class="mt-auto pt-4 flex items-center text-cupertino-accent text-[17px] font-normal group-hover:underline">
+                                View Case Study <span class="material-symbols-outlined text-sm ml-1">arrow_forward_ios</span>
+</div>
+</div>
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-rose-50/50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+</div>
+</div>
+<!-- Bottom CTA -->
+<div class="mt-20 text-center">
+<a class="inline-flex items-center text-cupertino-accent text-[19px] font-medium hover:underline transition-all" href="#">
+                        View all projects <span class="material-symbols-outlined text-base ml-1">chevron_right</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer Stub (Minimal Context) -->
+<footer class="w-full bg-cupertino-surface py-12 border-t border-cupertino-border">
+<div class="mx-auto max-w-[980px] px-6 text-center">
+<p class="text-[12px] text-cupertino-muted">Copyright © 2023 Ivan Bondarenco. All rights reserved.</p>
+</div>
+</footer>
+</main>
+</body></html>
